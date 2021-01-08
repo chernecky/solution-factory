@@ -35,8 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', 'poll',
-
+    'rest_framework',
+    'rest_framework.authtoken',
+    'poll',
+    'djoser',
 ]
 
 MIDDLEWARE = [

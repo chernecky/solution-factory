@@ -5,6 +5,7 @@ from solfactRest.poll.models import Question
 
 
 class PollDetailSerializer(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Poll
         fields = '__all__'
