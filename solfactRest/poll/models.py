@@ -13,7 +13,7 @@ class Poll(models.Model):
 
 
 class Question(models.Model):
-    title = models.CharField(max_length=200, verbose_name="Текст вопроса")
+    title = models.CharField(max_length=200, verbose_name="Текст вопроса", unique=True)
     type_Question = (
         (1, 'Ответ текстом'),
         (2, 'Ответ выбором варианта'),

@@ -1,10 +1,9 @@
-from django.contrib import admin
-from django.urls import path, include
-from poll.views import *
-
-from solfactRest.poll.views import PollCreateView
+from django.urls import path
+from solfactRest.poll.views import PollCreateView, QuestionListView, AnswerListView
 
 app_name = 'poll'
-urlpatterns = [
-    path('poll/create/', PollCreateView.as_view())
-]
+urlpatterns = {
+    path('poll/create/', PollCreateView.as_view()),
+    path('all/Question/<int:pk>/', QuestionListView.as_view()),
+    path('all/Answer', AnswerListView.as_view()),
+}

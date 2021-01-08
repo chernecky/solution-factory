@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from solfactRest.poll.models import Poll, Answer
+
 from solfactRest.poll.models import Question
 
 
@@ -12,10 +13,10 @@ class PollDetailSerializer(serializers.ModelSerializer):
 class QuestionDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = '__all__'
+        fields = 'title'
 
 
-class AnswerDetailSerializer(serializers.ModelSerializer):
+class AnswerListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer
-        fields = '__all__'
+        fields = 'answer'
